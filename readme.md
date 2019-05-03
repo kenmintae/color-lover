@@ -35,24 +35,24 @@ Our recommendation is to spend about 3 hours on this challenge. You're welcome t
   - Styles. The sketch file has an included swatches artboard which includes the colors you can use. Take note of the small details.
   - Iconography. The sketch file has the icons that should be used where necessary in the icons artboard. These can be exported and used as you see fit.
 - Replicate functionality
-  - Fetch and display a list of colors from a backend (example Node/Express) which has a database of colors (minimum 100).
+  - Fetch and display a list of colors from a backend (i.e. Node/Express) which has a database of colors (minimum 100).
   - Clicking the "load more" button should retrieve an "number of your choice" more colors from the colors database and display them on the homepage colors list *optional implementation: instead of having a "load more" button trigger, you may also implement infinite scrolling that loads more colors automatically as the user scrolls*
   - When a color is clicked, it should be saved to the color cart.
   - Cart Icon that displays the current number of added colors in the sites header.
   - Clicking on the cart icon should route you to the `/color-cart` route view which should display the list of saved palette colors which a user can delete.
-  - Refreshing the `/color-cart` route should reload the page and rehydrate the page with the correct data (ie the colors the user selected before refreshing the page).
+  - Refreshing the `/color-cart` route should reload the page and rehydrate the page with the correct data (i.e. the colors the user selected before refreshing the page).
   - The styling should be responsive so the application looks appropriate no matter the screen size.
 
 ## Stretch Goals
 Here are some ideas which have also been designed in the sketch file. Feel free to complete one, a few or all of the stretch goals. *Not completing stretch goals does not disqualify or hurt our view on the overall outcome of the code challenge*
   - Add in functionality on the `/cart` route to name and save the currently selected colors in the card, and display a list of previously saved color palettes
-  - Adding animation and motion (id route transitions, hover effects where it seems appropriate)
+  - Adding animation and motion (i.e. route transitions, hover effects where it seems appropriate)
 
 ## Deliverables
 
 In your email submission response to the test, please include the following:
 
 - Link to your repo
-- URL to your hosted App (Use a free hosting service of your choice. ie Heroku, Netlify, Github Pages, Zeit, Firebase, Surge etc...)
+- URL to your hosted App (Use a free hosting service of your choice. i.e. Heroku, Netlify, Github Pages, Zeit, Firebase, Surge etc...)
 
 Thanks and we look forward to your submission!
