@@ -4,7 +4,7 @@ Welcome to New Engen's at home proficiency challenge! This challenge gauges your
 
 To get started, clone this repo. Add your work to it in whatever structure you prefer, then push it to your own, renamed repo.  When you are finished, follow the instructions at the end of this document.
 
-We use React+Typescript here at NewEngen and while you aren't required to complete this challenge in React we would never say no to you using it ;)
+We use React+Typescript here at NewEngen, so while completing the project please limit the use of 3rd party libraries such as Redux, Recompose, Mobx etc for any state management or HOCs. 3rd library parties for styling such as emotion or styled-components are perfectly fine.
 
 This challenge has different milestones.
 
@@ -32,10 +32,10 @@ Our recommendation is to spend about 2-3 hours on this challenge. You're welcome
 
 - Replicate design
   - [Font](./font.md)
-  - Styles. The sketch file has an included swatches artboard which includes the colors you can use. Take note of the small details.
+  - Styles. The sketch file has an included a swatches artboard which includes the colors you can use. Take note of the small details.
   - Iconography. The sketch file has the icons that should be used where necessary in the icons artboard. These can be exported and used as you see fit.
 - Replicate functionality
-  - Fetch and display a list of colors from a backend (example Node/Express) which has a database of colors (minimum 100).
+  - To prevent unnecessary use of time setting up and building a node server to respond with a list of colors, we've provided a pre-built GraphQL api which is readily available to fetch and display a list of colors from. Information for the GraphQL Server provided is at the bottom of this readme.
   - Clicking the "load more" button should retrieve an "number of your choice" more colors from the colors database and display them on the homepage colors list *optional implementation: instead of having a "load more" button trigger, you may also implement infinite scrolling that loads more colors automatically as the user scrolls*
   - When a color is clicked, it should be saved to the color cart.
   - Cart Icon that displays the current number of added colors in the sites header.
@@ -56,3 +56,13 @@ In your email submission response to the test, please include the following:
 - URL to your hosted App (Use a free hosting service of your choice. ie Heroku, Netlify, Github Pages, Zeit, Firebase, Surge etc...)
 
 Thanks and we look forward to your submission!
+
+
+## GraphQL API
+Playground URL: https://colourlovers-graphql-api.herokuapp.com
+API Endpoint: https://colourlovers-graphql-api.herokuapp.com/graphql
+
+*Please use the playground to discover the queries and available params for such queries to use in your application.*
+*The GraphQL API has no cors policy, so you should have no problems retrieving the data*
+
+We've provided you with a graphql api that provides you with everything you'll need to complete the project. If you are completely unfamiliar with GraphQL or Apollo, I would suggest reading the very simple and straight forward introductory section on apollo-client which takes about 5 mins to setup and you'll only need to use the `Query` component or the `useQuery` hook to grab data from the GraphQL endpoint. The introduction is available [Here](https://www.apollographql.com/docs/react/get-started/). If you have any questions or need and support, please don't hestitate to reach out for guidance.
