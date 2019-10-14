@@ -59,10 +59,10 @@ Thanks and we look forward to your submission!
 
 
 ## GraphQL API
-Playground URL: https://colourlovers-graphql-api.herokuapp.com
-API Endpoint: https://colourlovers-graphql-api.herokuapp.com/graphql
+- Playground URL: https://colourlovers-graphql-api.herokuapp.com
+- API Endpoint: https://colourlovers-graphql-api.herokuapp.com/graphql
 
-*Please use the playground to discover the queries and available params for such queries to use in your application.*
-*The GraphQL API has no cors policy, so you should have no problems retrieving the data*
+**Please use the playground to discover the queries and available params for such queries to use in your application.**
+**The GraphQL API has no cors policy, so you should have no problems retrieving the data**
 
 We've provided you with a graphql api that provides you with everything you'll need to complete the project. If you are completely unfamiliar with GraphQL or Apollo, I would suggest reading the very simple and straight forward introductory section on apollo-client which takes about 5 mins to setup and you'll only need to use the `Query` component or the `useQuery` hook to grab data from the GraphQL endpoint. The introduction is available [Here](https://www.apollographql.com/docs/react/get-started/). If you have any questions or need and support, please don't hestitate to reach out for guidance.
