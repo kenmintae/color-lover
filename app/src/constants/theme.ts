@@ -11,22 +11,22 @@ const defaultTheme = {
   },
   palette: {
     primary: {
-      main: "1e4091"
+      main: "#1e4091"
     },
     common: {
       black: "#000000",
       white: "#ffffff"
     },
     background: {
-      default: "efefef"
+      default: "#efefef"
     },
     divider: "rgba(0, 0, 0, 0.12)",
     warning: {
-      main: "f13757",
+      main: "#f13757",
       contrastText: "#ffffff"
     },
     text: {
-      primary: "282828",
+      primary: "#282828",
     }
   },
   shadows: [

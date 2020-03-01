@@ -1,18 +1,21 @@
 import React, { lazy, Suspense } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 const routes = [
   {
+    name: "HOME PAGE",
     path: "/",
     exact: true,
-    component: () => <h1>This is main page</h1>
+    component: () => <Redirect to="/listing" />
   },
   {
+    name: "CART PAGE",
     path: "/cart",
     exact: false,
     component: lazy(() => import("views/Cart").catch(() => import("views/NotFound")))
   },
   {
+    name: "LISTING PAGE",
     path: "/listing",
     exact: false,
     component: lazy(() => import("views/Listing").catch(() => import("views/NotFound")))
@@ -26,7 +29,7 @@ export default function Routes() {
     <Suspense fallback={Loading}>
       <Switch>
         {
-          routes.map(({ component, path, exact }) => <Route path={path} component={component} exact={exact} />)
+          routes.map(({ component, path, exact, name }) => <Route key={name} path={path} component={component} exact={exact} />)
         }
       </Switch>
     </Suspense>
