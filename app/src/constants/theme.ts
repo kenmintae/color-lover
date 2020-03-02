@@ -11,14 +11,20 @@ const defaultTheme = {
   },
   palette: {
     primary: {
-      main: "#1e4091"
+      main: "#1e4091",
+      contrastText: "#ffffff"
+    },
+    secondary: {
+      main: "f13757",
+      contrastText: "#ffffff"
     },
     common: {
       black: "#000000",
       white: "#ffffff"
     },
     background: {
-      default: "#efefef"
+      default: "#efefef",
+      disabled: "rgba(0, 0, 0, 0.12)"
     },
     divider: "rgba(0, 0, 0, 0.12)",
     warning: {
