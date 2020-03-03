@@ -22,7 +22,7 @@ const routes = [
   }
 ]
 
-const Loading = () => <h1>Loading.....</h1>
+const Loading = <h1>Loading.....</h1>
 
 export default function Routes() {
   return (

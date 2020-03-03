@@ -1,14 +1,15 @@
 import gql from "graphql-tag";
 
-const COLORS = gql`
+export type ColorType = Readonly<{
+  id: number,
+  hex: string,
+}>
+
+export const colorsQuery = gql`
     query Colors($numResults: Int) {
       colors(numResults: $numResults) {
         id,
-        title,
         hex,
-        imageUrl
       }
     }
 `;
-
-export default COLORS;

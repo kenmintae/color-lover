@@ -22,6 +22,7 @@ const Layout = styled.div`
 const ContentWrapper = styled.div`
     flex: auto;
     min-height: 0;
+    padding: 16px;
 `;
 
 const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {

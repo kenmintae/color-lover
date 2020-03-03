@@ -1,39 +1,13 @@
 import React from "react";
-import styled from "styled-components";
 
-type SwatchCardProps = {
-  id: number;
-  hex: string;
+import { ColorType } from "apollo/queries/colors";
+import Swatch from "components/Swatch";
+import SwatchLabel from "components/SwatchLabel";
+
+interface SwatchCardProps extends ColorType {
   selected?: boolean;
-  onCardClick: (id: number) => void;
+  onCardClick: (swatch: ColorType) => void;
 }
-
-type ColorItemProps = {
-  selected: boolean;
-  backgroundColor: string
-}
-
-const ColorItem = styled.div<ColorItemProps>`
-  align-self: center;
-  background-color: #${props => props.backgroundColor};
-  border-radius: 4px;
-  box-shadow: ${props => props.selected ? `inset 0px 0px 0px 6px rgba(0,0,0,0.3)` : props.theme.shadows[1]};
-  cursor: pointer;
-  height: 100%;
-  justify-self: center;
-  min-width: 160px;
-  min-height: 160px;
-  position: relative;
-  width: 100%;
-`;
-
-const Title = styled.div`
-  position: absolute;
-  color: #fff;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-`;
 
 const SwatchCard: React.FC<SwatchCardProps> = ({
   id,
@@ -42,12 +16,12 @@ const SwatchCard: React.FC<SwatchCardProps> = ({
   selected = false
 }) => {
   const handleOnClick = () => {
-    onCardClick(id)
+    onCardClick({ id, hex })
   }
   return (
-    <ColorItem key={id} selected={selected} backgroundColor={hex} onClick={handleOnClick}>
-      <Title>#{hex}</Title>
-    </ColorItem>
+    <Swatch selected={selected} fill={hex} onClick={handleOnClick}>
+      <SwatchLabel>#{hex}</SwatchLabel>
+    </Swatch>
   )
 }
 

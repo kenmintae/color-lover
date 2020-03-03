@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { useSwatchesContext } from "contexts/SwatchesProvider";
+
+import Icon from "components/Icon"
 
 const HeaderWrapper = styled.header`
   align-items: center;
@@ -12,14 +15,27 @@ const HeaderWrapper = styled.header`
   position: relative;
 `;
 
+const IconWrapper = styled.div`
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  position: relative;
+`;
+
 export default function Header() {
+  const { selectedIdList } = useSwatchesContext();
+  const count = selectedIdList.length > 0 ? JSON.stringify(selectedIdList.length) : null;
   return (
     <HeaderWrapper>
       <Link to="/">
-        <img src="./NewEngen-Logo.svg" alt="New Engen Logo" />
+        <Icon glyph="logo" size="48" />
       </Link>
       <Link to="/cart">
-        <img src="./CartIcon.svg" alt="Cart Icon" />
+        {/* <img src="./CartIcon.svg" alt="Cart Icon" /> */}
+        <IconWrapper>
+          <Icon glyph="cart" size="48" count={count} />
+        </IconWrapper>
       </Link>
     </HeaderWrapper>
   )
