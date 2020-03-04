@@ -9,6 +9,6 @@ export const GridReset = styled.div`
 `;
 
 export const GridDefault = styled(GridReset)`
-    grid-column-gap: 16px;
-    grid-row-gap: 16px;
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
 `;

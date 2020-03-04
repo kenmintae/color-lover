@@ -6,10 +6,10 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import initApollo from 'apollo/initApollo';
 import theme from 'constants/theme';
 import GlobalStyles from 'constants/globalStyles';
-import Routes from './AppRoutes';
-import AppLayout from './containers/AppLayout';
 import SwatchesProvider from 'contexts/SwatchesProvider';
 import CartProvider from 'contexts/CartProvider';
+import Routes from './AppRoutes';
+import AppLayout from './containers/AppLayout';
 
 function App() {
     const client = initApollo();

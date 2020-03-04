@@ -16,15 +16,19 @@ const DeleteIcon = styled.div`
     align-items: center;
     background-color: #ffffff;
     border-radius: 4px;
-    box-shadow: ${props => props.theme.shadows[6]};
+    box-shadow: ${props => props.theme.shadows[1]};
     cursor: pointer;
     display: flex;
     justify-content: center;
     height: 100%;
-    min-width: 160px;
-    min-height: 160px;
+    min-width: 124px;
+    min-height: 124px;
     position: relative;
     width: 100%;
+`;
+
+const Label = styled.p`
+    font-weight: bold;
 `;
 
 const SavedPalette: React.FC<SavePaletteProps> = ({ palettes }) => {
@@ -37,7 +41,7 @@ const SavedPalette: React.FC<SavePaletteProps> = ({ palettes }) => {
             {palettes.map(palette => {
                 return (
                     <div key={palette.id}>
-                        <h5>{palette.name}</h5>
+                        <Label>{palette.name}</Label>
                         <SwatchRow>
                             {palette.swatches.map(({ id, hex }) => {
                                 return (
@@ -49,7 +53,7 @@ const SavedPalette: React.FC<SavePaletteProps> = ({ palettes }) => {
                             <DeleteIcon>
                                 <Icon
                                     glyph="trash"
-                                    size={32}
+                                    size={19}
                                     onClick={() => removePalette(palette)}
                                 />
                             </DeleteIcon>

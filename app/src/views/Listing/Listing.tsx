@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Button from 'components/Button';
+import Loading from 'components/Loading';
 import SwatchRow from 'components/SwatchRow';
 import SwatchCard from 'containers/SwatchCard';
 import { useSwatchesContext } from 'contexts/SwatchesProvider';
@@ -33,11 +34,16 @@ export default function Listing() {
     };
 
     if (loading) {
-        return <h1>Loading...</h1>;
+        return <Loading />;
     }
 
     if (error) {
-        return <h1>error</h1>;
+        return (
+            <h1>
+                we are experiencing technical difficulties. please try again
+                later.
+            </h1>
+        );
     }
 
     return (

@@ -1,10 +1,11 @@
 import React, { useContext, createContext, useReducer } from 'react';
+import { useQuery } from '@apollo/react-hooks';
+
+import { colorsQuery, ColorType } from 'apollo/queries/colors';
 import {
     DEFAULT_NUM_RESULTS,
     MAX_NUMBER_SWATCHES,
 } from 'constants/defaultValues';
-import { useQuery } from '@apollo/react-hooks';
-import { colorsQuery, ColorType } from 'apollo/queries/colors';
 
 type SwatchesContextProps = {
     children: React.ReactNode;

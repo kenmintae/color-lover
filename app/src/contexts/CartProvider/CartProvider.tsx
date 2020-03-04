@@ -56,7 +56,7 @@ function reducer(state: State, action: Action): State {
         case ACTIONS.RESTORE_PALETTES_FROM_STORAGE:
             return {
                 ...state,
-                palettes: [...state.palettes, ...action.payload],
+                palettes: [...action.payload, ...state.palettes],
             };
         default:
             return state;

@@ -17,7 +17,7 @@ type InputType = {
 
 const PlaceHolder = css`
     color: currentColor;
-    opacity: 0.5;
+    opacity: 0.35;
     transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 `;
 
@@ -25,7 +25,7 @@ const InputBase = styled.input`
     align-items: center;
     background: #fff;
     border: 0;
-    box-shadow: ${props => props.theme.shadows[2]};
+    box-shadow: ${props => props.theme.shadows[1]};
     box-sizing: content-box;
     border-radius: 4px;
     color: ${props => props.theme.palette.text.primary};

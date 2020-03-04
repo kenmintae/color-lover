@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { useSwatchesContext } from 'contexts/SwatchesProvider';
 
+import { useSwatchesContext } from 'contexts/SwatchesProvider';
 import Icon from 'components/Icon';
 
 const HeaderWrapper = styled.header`
@@ -35,7 +35,6 @@ export default function Header() {
                 <Icon glyph="logo" size="48" />
             </Link>
             <Link to="/cart">
-                {/* <img src="./CartIcon.svg" alt="Cart Icon" /> */}
                 <IconWrapper>
                     <Icon glyph="cart" size="48" count={count} />
                 </IconWrapper>
