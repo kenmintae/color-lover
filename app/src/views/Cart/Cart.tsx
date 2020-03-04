@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { v4 as uuidv4 } from 'uuid';
 
@@ -32,7 +32,7 @@ const InputController = styled.div`
 `;
 
 export default function Cart() {
-  const [value, setValue] = useState("")
+  const [value, setValue] = useState("");
   const {
     loading,
     error,
