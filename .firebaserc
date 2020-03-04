@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "color-lover-e5b34"
+  },
+  "targets": {
+    "color-lover-e5b34": {
+      "hosting": {
+        "app": [
+          "color-lover-e5b34"
+        ]
+      }
+    }
+  }
+}

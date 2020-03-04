@@ -1,1 +1,1 @@
-export { default } from "./SwatchRow"
+export { default } from './SwatchRow';

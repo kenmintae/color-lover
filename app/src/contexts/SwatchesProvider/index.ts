@@ -1,1 +1,1 @@
-export { default, useSwatchesContext } from "./SwatchesProvider";
+export { default, useSwatchesContext } from './SwatchesProvider';

@@ -1,1 +1,1 @@
-export { default } from "./SwatchLabel";
+export { default } from './SwatchLabel';

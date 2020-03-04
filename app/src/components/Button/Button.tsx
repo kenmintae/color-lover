@@ -1,22 +1,31 @@
-import React, { ButtonHTMLAttributes } from "react";
-import styled from "styled-components";
+import React, { ButtonHTMLAttributes } from 'react';
+import styled from 'styled-components';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
-  disabled?: boolean;
-  color?: "primary" | "secondary";
-  size?: "small" | "large";
-  variant?: "text" | "contained"
+    children: React.ReactNode;
+    disabled?: boolean;
+    color?: 'primary' | 'secondary';
+    size?: 'small' | 'large';
+    variant?: 'text' | 'contained';
 }
 
 const BaseButton = styled.button<ButtonProps>`
     align-items: center;
-    ${props => props.disabled ? `background-color: ${props.theme.palette.background.disabled} !important; color: ${props.theme.palette.text.primary} !important; pointer-events: none;` : null}
-    background-color: ${props => props.color === "primary" ? props.theme.palette.primary.main : props.theme.palette.secondary.main};
+    ${props =>
+        props.disabled
+            ? `background-color: ${props.theme.palette.background.disabled} !important; color: ${props.theme.palette.text.primary} !important; pointer-events: none;`
+            : null}
+    background-color: ${props =>
+        props.color === 'primary'
+            ? props.theme.palette.primary.main
+            : props.theme.palette.secondary.main};
     border: 0;
     border-radius: 30px;
     box-sizing: border-box;
-    color: ${props => props.color === "primary" ? props.theme.palette.primary.contrastText : "inherit"};
+    color: ${props =>
+        props.color === 'primary'
+            ? props.theme.palette.primary.contrastText
+            : 'inherit'};
     cursor: pointer;
     display: inline-flex;
     font-weight: 600;
@@ -41,20 +50,24 @@ const Label = styled.span`
 `;
 
 const Button: React.FC<ButtonProps> = ({
-  children,
-  disabled = false,
-  color = "primary",
-  size = "small",
-  variant = "text",
-  ...rest
+    children,
+    disabled = false,
+    color = 'primary',
+    size = 'small',
+    variant = 'text',
+    ...rest
 }) => {
-  return (
-    <BaseButton color={color} size={size} variant={variant} disabled={disabled} {...rest}>
-      <Label>
-        {children}
-      </Label>
-    </BaseButton>
-  )
-}
+    return (
+        <BaseButton
+            color={color}
+            size={size}
+            variant={variant}
+            disabled={disabled}
+            {...rest}
+        >
+            <Label>{children}</Label>
+        </BaseButton>
+    );
+};
 
 export default Button;

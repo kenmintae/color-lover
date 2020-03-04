@@ -1,1 +1,1 @@
-export { default } from "./SquareSwatch";
+export { default } from './SquareSwatch';

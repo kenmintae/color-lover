@@ -1,1 +1,1 @@
-export { default } from "./SavedPalette";
+export { default } from './SavedPalette';

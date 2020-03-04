@@ -1,15 +1,15 @@
-import gql from "graphql-tag";
+import gql from 'graphql-tag';
 
 export type ColorType = Readonly<{
-  id: number,
-  hex: string,
-}>
+    id: number;
+    hex: string;
+}>;
 
 export const colorsQuery = gql`
     query Colors($numResults: Int) {
-      colors(numResults: $numResults) {
-        id,
-        hex,
-      }
+        colors(numResults: $numResults) {
+            id
+            hex
+        }
     }
 `;
